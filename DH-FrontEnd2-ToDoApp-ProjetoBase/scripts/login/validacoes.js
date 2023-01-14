@@ -1,6 +1,6 @@
 // Criando um array para armazenar os erros de validação e imprimir para o usuário.
 let errors = []
-let UlErrors = document.getElementById('ulErrors')
+let UlErrors = document.getElementById('ulErrorsLogin')
 
 const regExpEmail = /@/i;
 

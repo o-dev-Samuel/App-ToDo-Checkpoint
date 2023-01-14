@@ -8,7 +8,7 @@ let btnAcessar = document.getElementById('btnAcessar')
 
 btnAcessar.addEventListener('click', (event) => {
     event.preventDefault()
-    let email = inputEmail.value.toUpperCase()
+    let email = upperCase(inputEmail.value)
     email = email.trim()
     let password = inputPassword.value.trim()
     alert(`${email}

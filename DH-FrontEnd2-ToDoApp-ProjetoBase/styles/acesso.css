@@ -91,11 +91,11 @@ button {
   justify-content: center;
 }
 
-#containerErrors{
+.containerErrors{
   margin-top: 20px;
  color: rgb(192, 19, 19);
 }
 
-#ulErrors{
+.ulErrors{
   list-style: none;
 }

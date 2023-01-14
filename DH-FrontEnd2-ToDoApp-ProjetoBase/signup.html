@@ -13,6 +13,7 @@
   <!-- ---------------------- lógica aplicada no registro -------------------- -->
   <script src="./scripts/signup/normalizacoes.js" type="module" defer></script>
   <script src="./scripts/signup/validacoes.js" type="module" defer></script>
+  <script src="./scripts/utils/utils.js" defer></script>
 </head>
 
 <body>
@@ -48,7 +49,11 @@
       </label>
 
       <button id="btnCreate">Criar conta</button>
+      <div id="containerErrorsSignup" class="containerErrors">
+        <ul id="ulErrorsSignup" class="ulErrors">
 
+        </ul>
+      </div>
     </form>
     <div class="ingressar">
       <a href="index.html">Já possui conta? Acesse aqui</a>
