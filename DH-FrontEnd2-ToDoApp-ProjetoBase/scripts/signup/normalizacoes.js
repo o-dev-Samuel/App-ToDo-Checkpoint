@@ -11,12 +11,11 @@ let inputRepeatPassword = document.getElementById('inputRepeatPassword')
 let firstName;
 let lastName;
 let email;
-let password;
-let repeatPasswoerd;
+
 
 btnCreate.addEventListener('click', (event) => {
     event.preventDefault()
-    
+
     // Tornando os dados maiúsculos
     firstName = upperCase(inputName.value)
     lastName = upperCase(inputLastName.value)
@@ -26,11 +25,12 @@ btnCreate.addEventListener('click', (event) => {
     firstName = firstName.trim()
     lastName = lastName.trim()
     email = email.trim()
-
+    let password = inputPassword.value.trim()
+    let repeatPasswoerd = inputRepeatPassword.value.trim()
     console.log(`
-    ${firstName} ${lastName} ${email}
+    ${firstName} ${lastName} ${email} ${password}
     `)
 })
 
 
-    
+

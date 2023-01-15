@@ -1,18 +1,17 @@
 // Criando um array para armazenar os erros de validação e imprimir para o usuário.
 let errors = []
-let UlErrors = document.getElementById('ulErrorsLogin')
-
-const regExpEmail = /@/i;
+let ulErrors = document.getElementById('ulErrorsLogin')
 
 // Variaveis para ativação do btn
 let emailLengthValidation = 0;
 let emailRegExpValidation = 0;
 let passwordValidation = 0;
+let validation;
 
 
 
 inputEmail.addEventListener('keyup', () => {
-    UlErrors.innerHTML = ``
+    ulErrors.innerHTML = ``
 
     // Validando se o campo email está vazio
     if (inputEmail.value.length <= 0) {
@@ -60,12 +59,11 @@ inputEmail.addEventListener('keyup', () => {
 
     // Imprimindo os erros para o usuário
     errors.forEach(error => {
-        UlErrors.innerHTML += `<li>${error}</li>`
+        ulErrors.innerHTML += `<li>${error}</li>`
     })
 
     // Somando as validações, se chegar a 3, tuod está validado
-    let validation = passwordValidation + emailLengthValidation + emailRegExpValidation;
-
+    validation = passwordValidation + emailLengthValidation + emailRegExpValidation;
     // Ativando ou desativando o btn de acordo com as validações
     if (validation == 3) {
         btnAcessar.style.backgroundColor = 'var(--primary)'
@@ -104,13 +102,13 @@ inputPassword.addEventListener('keyup', () => {
     }
 
     // Imprimindo os erros para o usuário
-    UlErrors.innerHTML = ``
+    ulErrors.innerHTML = ``
     errors.forEach(error => {
-        UlErrors.innerHTML += `<li>${error}</li>`
+        ulErrors.innerHTML += `<li>${error}</li>`
     })
-
+    // Somando as validações, se chegar a 3, tuod está validado
+    validation = passwordValidation + emailLengthValidation + emailRegExpValidation;
     // ativando ou desativando o btn de acordo com as validações
-    let validation = passwordValidation + emailLengthValidation + emailRegExpValidation;
     if (validation == 3) {
         btnAcessar.style.backgroundColor = 'var(--primary)'
         btnAcessar.removeAttribute('disabled')

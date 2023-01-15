@@ -2,3 +2,5 @@
    function upperCase(data){
     return data.toUpperCase()
 }
+
+const regExpEmail = /@/i;
