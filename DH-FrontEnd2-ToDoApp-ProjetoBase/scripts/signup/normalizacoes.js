@@ -30,6 +30,40 @@ btnCreate.addEventListener('click', (event) => {
     console.log(`
     ${firstName} ${lastName} ${email} ${password}
     `)
+
+    
+      
+
+    let settings = {
+        method: 'POST',
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+            "firstName": firstName,
+            "lastName": lastName,
+            "email": email,
+            "password": password
+          })
+        
+    }
+
+    console.log(settings)
+
+    // Comunicando com a API
+    fetch('http://todo-api.ctd.academy:3000/v1/users', settings)
+    .then(response => {
+         return response.json()
+    })
+    .then(data =>{
+        console.log(data)
+    })
+    .catch((erro) => {
+        console.log(erro)
+    })
+
 })
 
 

@@ -243,6 +243,6 @@ inputRepeatPassword.addEventListener('keyup', () =>{
     }
 })
 
-btnCreate.addEventListener('click', () =>{
-    
-})
+
+
+
