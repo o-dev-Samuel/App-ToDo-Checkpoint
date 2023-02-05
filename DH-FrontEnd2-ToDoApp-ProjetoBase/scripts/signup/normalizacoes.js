@@ -13,9 +13,9 @@ let lastName;
 let email;
 
 
+
 btnCreate.addEventListener('click', (event) => {
     event.preventDefault()
-
     // Tornando os dados maiúsculos
     firstName = upperCase(inputName.value)
     lastName = upperCase(inputLastName.value)
@@ -31,10 +31,7 @@ btnCreate.addEventListener('click', (event) => {
     ${firstName} ${lastName} ${email} ${password}
     `)
 
-    
-      
-
-    let settings = {
+    let settingsSignup = {
         method: 'POST',
 
         headers: {
@@ -46,25 +43,28 @@ btnCreate.addEventListener('click', (event) => {
             "lastName": lastName,
             "email": email,
             "password": password
-          })
-        
+        })
+
     }
 
-    console.log(settings)
+    console.log(settingsSignup)
 
     // Comunicando com a API
-    fetch('http://todo-api.ctd.academy:3000/v1/users', settings)
-    .then(response => {
-         return response.json()
-    })
-    .then(data =>{
-        console.log(data)
-    })
-    .catch((erro) => {
-        console.log(erro)
-    })
+    fetch(`${baseUrl}/users`, settingsSignup)
+        .then(response => {
+            return response.json()
+        })
+        .then(data => {
+            console.log(data)
+        })
+        .catch((erro) => {
+            console.log(erro)
+        })
+
+        
 
 })
+
 
 
 

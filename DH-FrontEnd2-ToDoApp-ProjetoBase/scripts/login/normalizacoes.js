@@ -14,6 +14,32 @@ btnAcessar.addEventListener('click', (event) => {
     alert(`${email}
     ${password}`)
     alert("Logou")
+
+    let settingsLogin = {
+        method: 'POST',
+
+        headers: {
+            'Content-Type':'application/json'
+        },
+
+        body: JSON.stringify({
+            "email": email,
+            "password": password
+          })
+    }
+
+    console.log(settingsLogin)
+
+    fetch(`${baseUrl}/login`, settingsLogin)
+    .then((response) =>{
+        response.json()
+    })
+    .then((jwt) =>{
+        alert(jwt)
+    })
+    .catch((erro) =>{
+        alert(erro)
+    })
 })
 
 

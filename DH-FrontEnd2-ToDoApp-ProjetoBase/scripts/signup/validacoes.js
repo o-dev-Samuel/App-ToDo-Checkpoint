@@ -1,4 +1,5 @@
 // array de erros
+
 let errors = []
 
 // capturando elementos
@@ -45,6 +46,7 @@ inputName.addEventListener('keyup', () =>{
     if(validation == 6) {
         btnCreate.style.backgroundColor = 'var(--primary)'
         btnCreate.removeAttribute('disabled')
+        
     } else {
         btnCreate.style.backgroundColor = 'rgb(94, 90, 90)'
         btnCreate.setAttribute('disabled', true)
@@ -84,6 +86,7 @@ inputLastName.addEventListener('keyup', () =>{
     if(validation == 6) {
         btnCreate.style.backgroundColor = 'var(--primary)'
         btnCreate.removeAttribute('disabled')
+        
     } else {
         btnCreate.style.backgroundColor = 'rgb(94, 90, 90)'
         btnCreate.setAttribute('disabled', true)
@@ -142,6 +145,7 @@ inputEmail.addEventListener('keyup', () =>{
     if(validation == 6) {
         btnCreate.style.backgroundColor = 'var(--primary)'
         btnCreate.removeAttribute('disabled')
+        
     } else {
         btnCreate.style.backgroundColor = 'rgb(94, 90, 90)'
         btnCreate.setAttribute('disabled', true)
@@ -198,6 +202,7 @@ inputPassword.addEventListener('keyup', () =>{
     if(validation == 6) {
         btnCreate.style.backgroundColor = 'var(--primary)'
         btnCreate.removeAttribute('disabled')
+        
     } else {
         btnCreate.style.backgroundColor = 'rgb(94, 90, 90)'
         btnCreate.setAttribute('disabled', true)
@@ -237,6 +242,7 @@ inputRepeatPassword.addEventListener('keyup', () =>{
     if(validation == 6) {
         btnCreate.style.backgroundColor = 'var(--primary)'
         btnCreate.removeAttribute('disabled')
+        
     } else {
         btnCreate.style.backgroundColor = 'rgb(94, 90, 90)'
         btnCreate.setAttribute('disabled', true)
